@@ -1,16 +1,20 @@
-'''9. Palindrome Number
-Given an integer x, return true if x is palindrome integer.
-
-An integer is a palindrome
-when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
-
-'''
-
 def palindrome_number(number):
+    """
+    Check if an integer is a palindrome.
+
+    Args:
+        number (int): The integer to be checked.
+
+    Returns:
+        bool: True if the integer is a palindrome, False otherwise.
+    """
     if number < 0:
-        return  False
-    convert = str(number)
-    if convert.lower() == convert[::-1].lower():
+        return False
+
+    # Convert the integer to a string and compare it with its reverse.
+    # Using case-insensitive comparison to handle both upper and lower case letters.
+    if str(number).lower() == str(number)[::-1].lower():
         return True
 
-print(palindrome_number(-121))
+print(palindrome_number(-121))  # Output: True
+
